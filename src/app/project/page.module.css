@@ -1,0 +1,94 @@
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.eyebrow {
+  font-size: var(--label-size);
+  font-weight: var(--label-weight);
+  letter-spacing: var(--label-tracking);
+  text-transform: uppercase;
+  color: var(--label);
+}
+
+.title {
+  font-size: clamp(40px, 7vw, 72px);
+  line-height: 1;
+}
+
+.intro {
+  max-width: 56ch;
+  font-size: 18px;
+  color: var(--muted);
+}
+
+.projects {
+  display: grid;
+  gap: 16px;
+
+  @media (min-width: 640px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  text-decoration: none;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+
+  &:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-2px);
+  }
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardOrg {
+  font-size: var(--label-size);
+  font-weight: var(--label-weight);
+  letter-spacing: var(--label-tracking);
+  text-transform: uppercase;
+  color: var(--label);
+}
+
+.arrow {
+  transition:
+    transform 0.2s,
+    color 0.2s;
+
+  .card:hover & {
+    transform: translateX(3px);
+    color: var(--accent-text);
+  }
+}
+
+.cardTitle {
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.cardSummary {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.metric {
+  margin-top: auto;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent-text);
+}

@@ -1,0 +1,40 @@
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.pagerTitle {
+  font-family: var(--font-heading-family);
+  font-size: 20px;
+  color: var(--heading);
+  transition: color var(--ease);
+}
+
+.pagerLink {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-decoration: none;
+
+  &:hover .pagerTitle {
+    color: var(--accent-text);
+  }
+}
+
+.pagerLinkNext {
+  composes: pagerLink;
+  margin-left: auto;
+  text-align: right;
+}
+
+.pagerLabel {
+  font-size: var(--label-size);
+  font-weight: var(--label-weight);
+  letter-spacing: var(--label-tracking);
+  text-transform: uppercase;
+  color: var(--label);
+}

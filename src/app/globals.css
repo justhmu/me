@@ -1,0 +1,166 @@
+/* ==========================================================================
+   1. Color primitives — the raw palette. Nothing outside this block should
+      use hex values; reference these instead.
+   ========================================================================== */
+:root {
+  --black: #0b0b0b;
+  --gray: #c2b2b4;
+  --white: #f2efe9;
+  --orange: #d9481c;
+  --green: #28502e;
+  --brown: #312022;
+  --blue: #005ef5;
+  --violet: #9055a2;
+}
+
+/* ==========================================================================
+   2. Semantic tokens — what each color is *for*. Derived from primitives,
+      optionally adjusted with color-mix() or relative color syntax.
+   ========================================================================== */
+:root {
+  /* units */
+  --unit: 16px;
+
+  /* Surfaces */
+  --page-background: color-mix(in srgb, var(--black), var(--white) 5%);
+  --surface: color-mix(in srgb, var(--black), var(--white) 9%);
+  --surface-sunken: var(--black);
+  --header-background: color-mix(
+    in srgb,
+    var(--page-background) 85%,
+    transparent
+  );
+
+  /* Text */
+  --heading: var(--white);
+  --sub-heading: color-mix(in srgb, var(--white) 82%, var(--gray));
+  --body: var(--white);
+  --muted: var(--gray);
+  --label: var(--gray);
+
+  /* Accent */
+  --accent: var(--orange);
+  --accent-text: oklch(from var(--orange) calc(l + 0.08) c h);
+  --accent-ring: color-mix(in srgb, var(--orange) 55%, transparent);
+
+  /* Lines */
+  --border: color-mix(in srgb, var(--gray) 22%, var(--black));
+  --border-strong: color-mix(in srgb, var(--gray) 40%, var(--black));
+
+  /* Buttons */
+  --button-background: var(--surface);
+  --button-border: var(--border);
+  --button-border-hover: var(--muted);
+  --button-text: var(--body);
+  --button-background-primary: var(--accent);
+  --button-border-primary: var(--accent);
+  --button-text-primary: #fff;
+
+  /* Status */
+  --status-live: var(--green);
+  --status-live-glow: color-mix(in srgb, var(--green) 20%, transparent);
+
+  /* Code */
+  --code-background: var(--surface-sunken);
+  --code-text: color-mix(in srgb, var(--white) 88%, var(--gray));
+  --code-keyword: oklch(from var(--orange) calc(l + 0.15) c h);
+  --code-string: #a8d18d;
+  --code-comment: color-mix(in srgb, var(--gray) 70%, var(--black));
+
+  /* Focus */
+  --focus-ring: var(--accent-text);
+}
+
+/* ==========================================================================
+   3. Typography, layout and motion tokens
+   ========================================================================== */
+:root {
+  --font-heading-family: var(--font-heading), Georgia, serif;
+  --font-body-family: var(--font-body), system-ui, sans-serif;
+  --font-mono-family: ui-monospace, "SF Mono", Menlo, monospace;
+
+  --label-size: 12px;
+  --label-weight: 500;
+  --label-tracking: 0.08em;
+
+  --content-width: 1040px;
+  --gutter: 24px;
+  --header-height: 60px;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-pill: 999px;
+
+  --ease: 0.15s ease;
+
+  color-scheme: dark;
+}
+
+/* ==========================================================================
+   4. Global element defaults
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--page-background);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--page-background);
+  color: var(--body);
+  font-family: var(--font-body-family);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2 {
+  font-family: var(--font-heading-family);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--heading);
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  color: var(--blue);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none;
+    animation: none;
+  }
+}

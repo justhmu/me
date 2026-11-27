@@ -1,0 +1,16 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @media (min-width: 860px) {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 56px;
+  }
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}

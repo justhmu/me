@@ -1,0 +1,134 @@
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--unit) * 3);
+
+  .head {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .eyebrow {
+    font-size: var(--label-size);
+    font-weight: var(--label-weight);
+    letter-spacing: var(--label-tracking);
+    text-transform: uppercase;
+    color: var(--label);
+  }
+
+  h1 {
+    font-size: clamp(44px, 8vw, 84px);
+    line-height: 1;
+  }
+
+  .intro {
+    max-width: 56ch;
+    font-size: 18px;
+    color: var(--muted);
+  }
+
+  .role {
+    display: grid;
+    gap: 6px;
+    padding: 26px 0;
+    border-bottom: 1px solid var(--border);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    @media (min-width: 760px) {
+      grid-template-columns: 180px 1fr;
+      gap: 24px;
+    }
+  }
+
+  .period {
+    padding-top: 3px;
+    font-size: var(--label-size);
+    font-weight: var(--label-weight);
+    letter-spacing: var(--label-tracking);
+    text-transform: uppercase;
+    color: var(--label);
+  }
+
+  .roleTitle {
+    font-family: var(--font-body-family);
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .company {
+    font-weight: 400;
+    color: var(--muted);
+  }
+
+  .roleBody {
+    max-width: 62ch;
+    margin-top: 6px;
+    color: var(--muted);
+  }
+
+  .techTitle {
+    margin: 0 0 24px;
+    font-size: 32px;
+  }
+
+  .tech {
+    display: grid;
+    gap: 28px;
+
+    @media (min-width: 760px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .group {
+    margin-bottom: 12px;
+    font-size: var(--label-size);
+    font-weight: var(--label-weight);
+    letter-spacing: var(--label-tracking);
+    text-transform: uppercase;
+    color: var(--label);
+  }
+
+  .pills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: calc(var(--unit) / 2);
+
+    li {
+      display: inline-block;
+      white-space: nowrap;
+      line-height: calc(2 * var(--unit));
+      border-radius: var(--radius-pill);
+      padding: 0 var(--unit);
+      background: var(--orange);
+
+      &.language {
+        background-color: var(--orange);
+      }
+      &.framework {
+        background-color: var(--brown);
+      }
+      &.system {
+        background-color: var(--blue);
+      }
+      &.standard {
+        background-color: var(--green);
+      }
+      &.tool {
+        background-color: var(--violet);
+      }
+
+      .years {
+        font-variant-numeric: tabular-nums;
+        color: hsl(from var(--muted) h s 85%);
+        font-weight: 400;
+      }
+    }
+  }
+}
