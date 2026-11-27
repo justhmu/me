@@ -19,6 +19,7 @@
     "@biomejs/biome": "2.4.2",
     "@types/node": "^24",
     "@types/react": "^19.3.3",
+    "babel-plugin-react-compiler": "^1.0.0",
     "hast-util-to-jsx-runtime": "^2.3.7",
     "shiki": "^4.6.0",
     "typescript": "^5"
