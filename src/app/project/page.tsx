@@ -6,15 +6,25 @@ import styles from "./page.module.css";
 export const metadata: Metadata = { title: "Work" };
 
 export default function WorkPage() {
+  let minYear = projects[0].year;
+  let maxYear = projects[0].year;
+  for (const p of projects) {
+    if (p.year < minYear) {
+      minYear = p.year;
+    }
+    if (p.year > maxYear) {
+      maxYear = p.year;
+    }
+  }
+
   return (
     <>
       <header className={styles.head}>
-        <span className={styles.eyebrow}>2019 — 2026</span>
-        <h1 className={styles.title}>Selected work</h1>
-        <p className={styles.intro}>
-          Five projects I&apos;m proud of — the problem, what I did, and what
-          changed.
-        </p>
+        <span className={styles.eyebrow}>
+          {minYear === maxYear ? minYear : `${minYear} — ${maxYear}`}
+        </span>
+        <h1 className={styles.title}>Selected Work</h1>
+        <p className={styles.intro}>Projects I&apos;m proud of.</p>
       </header>
 
       <div className={styles.projects}>

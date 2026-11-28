@@ -9,7 +9,7 @@ export type Project = {
   slug: string;
   title: string;
   navTitle: string;
-  year: string;
+  year: number;
   org: string;
   period: string;
   role: string;
@@ -30,7 +30,7 @@ export const projects: Project[] = [
     slug: "portfolio",
     title: "Portfolio",
     navTitle: "Portfolio",
-    year: "2026",
+    year: 2026,
     org: "Just HMU",
     period: "2026",
     role: "Creator",
