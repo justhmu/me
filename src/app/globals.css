@@ -6,6 +6,8 @@
   --black: #0b0b0b;
   --gray: #c2b2b4;
   --white: #f2efe9;
+  --off-black: color-mix(in srgb, var(--black), var(--white) 5%);
+  --dark-gray: color-mix(in srgb, var(--black), var(--white) 10%);
   --orange: #d9481c;
   --green: #28502e;
   --brown: #312022;
@@ -22,8 +24,8 @@
   --unit: 16px;
 
   /* Surfaces */
-  --page-background: color-mix(in srgb, var(--black), var(--white) 5%);
-  --surface: color-mix(in srgb, var(--black), var(--white) 9%);
+  --page-background: var(--off-black);
+  --surface: var(--dark-gray);
   --surface-sunken: var(--black);
   --header-background: color-mix(
     in srgb,

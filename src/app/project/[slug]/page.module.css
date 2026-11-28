@@ -111,17 +111,3 @@
 .comment {
   color: var(--code-comment);
 }
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.tag {
-  padding: 3px 10px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-pill);
-  font-size: 12px;
-  color: var(--muted);
-}

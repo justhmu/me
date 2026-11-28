@@ -43,14 +43,6 @@ export default async function ProjectPage({ params }: Props) {
             )}
           </div>
         ))}
-
-        <ul className={styles.tags} aria-label="Technologies">
-          {project.tags?.map((tag) => (
-            <li key={tag} className={styles.tag}>
-              {tag}
-            </li>
-          ))}
-        </ul>
       </div>
 
       <ProjectPager slug={slug} />

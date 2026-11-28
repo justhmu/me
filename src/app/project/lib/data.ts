@@ -27,6 +27,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "dashboard",
+    title: "Dashboard",
+    navTitle: "Dashboard",
+    year: 2026,
+    org: "Concept",
+    period: "2026",
+    role: "Job Seeker",
+    summary: "eCommerce dashboard concept.",
+    metric: "Next.js, Vercel, Bun, Biome",
+    lead: "Showcase myself using the best software tools and platforms available today.",
+    tags: ["CSS"],
+  },
+  {
     slug: "portfolio",
     title: "Portfolio",
     navTitle: "Portfolio",

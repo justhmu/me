@@ -8,10 +8,14 @@ import "./globals.css";
 
 const fontHeading = Lora({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500"],
   variable: "--font-heading",
 });
-const fontBody = Inter({ subsets: ["latin"], variable: "--font-body" });
+const fontBody = Inter({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-body",
+});
 
 export const metadata: Metadata = {
   title: {

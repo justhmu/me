@@ -1,0 +1,19 @@
+.circular-progress {
+  position: relative;
+  .background {
+    stroke: var(--off-black);
+  }
+  .foreground {
+    stroke: var(--green);
+  }
+  svg {
+    circle {
+      transition: all 1s;
+    }
+  }
+  .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

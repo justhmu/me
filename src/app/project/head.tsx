@@ -18,6 +18,13 @@ export default async function ProjectHead({ slug }: { slug: string }) {
         <span className={styles.metaItem}>{project.role}</span>
       </div>
       <h1 className={styles.title}>{project.title}</h1>
+      <ul className={styles.tags} aria-label="Technologies">
+        {project.tags?.map((tag) => (
+          <li key={tag} className={styles.tag}>
+            {tag}
+          </li>
+        ))}
+      </ul>
       <p className={styles.lead}>{project.lead}</p>
       {project.stats && (
         <dl className={styles.stats}>
