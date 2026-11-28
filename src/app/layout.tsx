@@ -1,17 +1,17 @@
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
-import { Gloock, Inter } from "next/font/google";
+import { Inter, Lora } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import styles from "./layout.module.css";
 import "./globals.css";
 
-const gloock = Gloock({
+const fontHeading = Lora({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-heading",
 });
-const inter = Inter({ subsets: ["latin"], variable: "--font-body" });
+const fontBody = Inter({ subsets: ["latin"], variable: "--font-body" });
 
 export const metadata: Metadata = {
   title: {
@@ -41,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${gloock.variable} ${inter.variable}`}>
+    <html lang="en" className={`${fontHeading.variable} ${fontBody.variable}`}>
       <body>
         <SiteHeader />
         <main className={styles.main}>{children}</main>
