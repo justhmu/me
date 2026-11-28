@@ -13,7 +13,7 @@ const roles: {
     period: "2025-2026",
     title: "Software Developer and Owner",
     company: "Just HMU",
-    body: `Built a complete software stack supporting a geolocation based social app including a real-time multiplayer card game and LLM-enhanced chat services.`,
+    body: `Built a complete software stack supporting a geolocation based social app featuring a real-time multiplayer card game and LLM-enhanced chat services.`,
   },
   {
     period: "2026",
@@ -25,7 +25,7 @@ const roles: {
     period: "2018-2025",
     title: "Software Developer and Owner",
     company: "Kinnokumo",
-    body: `Built a SaaS product targeting small business niches, serving thousands of customers and moving over 1M USD on a monthly basis.`,
+    body: `End-to-end ownership of a SaaS product targeting small business niches, serving thousands of customers and moving over 1M USD on a monthly basis.`,
   },
   {
     period: "2005-2018",
