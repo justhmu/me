@@ -31,7 +31,7 @@ const roles: {
     period: "2005-2018",
     title: "Application Developer",
     company: "University of California, Los Angeles",
-    body: `Developed website and applications using C# / .NET, React.js, Node.js and other open source technologies reaching 100,000's of alumni monthly and securing millions in donations annually. Drove adoption of cloud infrastructure (AWS), continuous integration, and deployment when on-prem infra and manual deployment was the norm.`,
+    body: `Developed marketing websites and internal tools using C# / .NET, React.js, Node.js and other open source technologies reaching 100,000's of alumni monthly and securing millions in donations annually. Drove adoption of cloud infrastructure (AWS), continuous integration, and deployment when on-prem infra and manual deployment was the norm.`,
   },
   {
     period: "2003-2005",
