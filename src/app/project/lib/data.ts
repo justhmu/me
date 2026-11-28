@@ -28,29 +28,30 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "dashboard",
-    title: "Dashboard",
     navTitle: "Dashboard",
     year: 2026,
     org: "Concept",
     period: "2026",
     role: "Job Seeker",
+    title: "Dashboard",
+    tags: ["CSS", "SVG"],
+    lead: "Demonstrate the power of modern CSS and SVG.",
     summary: "eCommerce dashboard concept.",
-    metric: "Next.js, Vercel, Bun, Biome",
-    lead: "Showcase myself using the best software tools and platforms available today.",
-    tags: ["CSS"],
+    metric: "Modern CSS",
   },
   {
     slug: "portfolio",
-    title: "Portfolio",
     navTitle: "Portfolio",
     year: 2026,
     org: "Just HMU",
     period: "2026",
     role: "Creator",
+    title: "Portfolio",
+    tags: ["Next.js", "Bun", "Biome", "Vercel"],
+    lead: "Showcase myself using the best software tools and platforms available today.",
     summary:
       "Showcase myself using the best software tools and platforms available in 2026.",
     metric: "Next.js, Vercel, Bun, Biome",
-    lead: "Showcase myself using the best software tools and platforms available today.",
     sections: [
       {
         heading: "Introduction",
@@ -77,7 +78,6 @@ export const projects: Project[] = [
         body: 'The data for this piece is largely a matter of developer experience. In that sense, it is somewhat sensational. However, it is clear that we have come a long, long way since the early days of web development. All of these tools are at least "second generation". Next.js replaced vanilla React.js, which replaced jQuery, which replaced direct DOM manipulation. Bun replaces Node.js. Biome replaces ESLint and Prettier. Vercel Cloud replaces the infra guy inside of me. All of these tools improve upon the developer experience compared to their predecessors and offer better performance and/or improved functionality. I can definitely recommend all of them.',
       },
     ],
-    tags: ["Next.js", "Bun", "Biome", "Vercel"],
   },
 ];
 
