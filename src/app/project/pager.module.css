@@ -1,7 +1,7 @@
 .pager {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  gap: var(--unit);
   margin-top: 56px;
   padding-top: 24px;
   border-top: 1px solid var(--border);

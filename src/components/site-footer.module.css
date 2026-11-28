@@ -1,6 +1,6 @@
 .footer {
   border-top: 1px solid var(--border);
-  padding: 20px 0 32px;
+  padding: var(--unit) 0 calc(2 * var(--unit));
 }
 
 .inner {

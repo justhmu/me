@@ -6,7 +6,7 @@
   .head {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: var(--unit);
   }
 
   .eyebrow {
@@ -73,7 +73,7 @@
 
   .techTitle {
     margin: 0 0 24px;
-    font-size: 32px;
+    font-size: calc(2 * var(--unit));
   }
 
   .tech {

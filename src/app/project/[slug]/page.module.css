@@ -19,7 +19,7 @@
 }
 
 .title {
-  margin-top: 16px;
+  margin-top: var(--unit);
   font-size: clamp(38px, 6vw, 64px);
   line-height: 1;
 }
@@ -66,7 +66,7 @@
 
 .body {
   display: grid;
-  gap: 32px;
+  gap: calc(2 * var(--unit));
 }
 
 .section {
@@ -75,7 +75,8 @@
 }
 
 .sectionTitle {
-  font-size: 26px;
+  margin-top: var(--unit);
+  font-size: calc(2 * var(--unit));
 }
 
 .sectionBody {
@@ -84,8 +85,8 @@
 }
 
 .code {
-  margin-top: 16px;
-  padding: 16px;
+  margin-top: var(--unit);
+  padding: var(--unit);
   overflow-x: auto;
   border: 1px solid var(--border);
   border-radius: 10px;

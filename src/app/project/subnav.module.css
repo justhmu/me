@@ -3,7 +3,7 @@
 
   @media (min-width: 860px) {
     position: sticky;
-    top: calc(var(--header-height) + 32px);
+    top: calc(var(--header-height) + 2 * var(--unit));
     width: 220px;
   }
 }

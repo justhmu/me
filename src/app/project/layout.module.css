@@ -1,7 +1,7 @@
 .layout {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: calc(2 * var(--unit));
 
   @media (min-width: 860px) {
     flex-direction: row;
